@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="icon" type="image/x-icon" href="/instagram_icon.png">
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-dark">
+    <center>    
+        <h1>Instagram</h1>
+        <a href="http://localhost:3000/accounts/new">Create a new account</a>
+        <% for (account of accounts) { %>
+            
+                <div class="profile p-3 mb-2 bg-black text-dark-emphasis rounded-2">
+                    
+                    <div class="profile-image">
+                       
+                        <img src="<%= account.profile_pic %>" alt="Profile Pic">
+
+                    </div>
+                    <div class="profile-info">
+                        <div class="first-info">
+                            <p class="fw-bold"><%= account.username %></p>
+                            <button class="btn btn-primary fw-semibold">Follow</button>
+                            <button  class="btn btn-secondary fw-semibold msg">Message</button>
+                        </div>
+                        <div class="second-info">
+                            <p><span class="fw-bolder"><%= account.post_count %></span> posts</p>
+                            <p><span class="fw-bolder"><%= account.followers_count %></span> followers</p>
+                            <p><span class="fw-bolder"><%= account.following_count %></span> following</p>
+                        </div>
+                        <div class="content">
+                            <%= account.content %>
+                            
+                        </div>  
+                        
+                    </div>
+                </div>
+                <a href="http://localhost:3000/accounts/<%= account.id %>"><i class="fa-solid fa-circle-user m-3"></i></a>
+                
+                <a href="http://localhost:3000/accounts/<%= account.id %>/edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                <form method="post" action="http://localhost:3000/accounts/<%= account.id %>?_method=delete" style="display: inline;">
+                    <i class="fa-solid ">
+                        <button  class="btn btn-dark">Del</button>
+                    </i>
+                </form>
+        <% } %> 
+        <br><br>
+    </center>
+</body>
+</html>

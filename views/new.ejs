@@ -1,0 +1,31 @@
+ <%- include("includes/newi.ejs") %>
+<body class="bg-dark">
+    <div class="m-4">
+        <form method="post" action="/accounts" enctype="multipart/form-data" >
+            <h3> NEW ACCOUNT
+            </h3> <br>
+            <label for="username">Enter your username : </label>
+            <input type="text"  placeholder=" enter username" name="username" class="rounded text-black"  > <br> <br>
+            
+            <label for="post_count">Enter your Post count : </label>
+            <input type="text"  placeholder=" enter post_count" name="post_count" class="rounded text-black" > <br> <br>
+            
+            <label for="followers_count">Enter your Followers count : </label>
+            <input type="text"  placeholder=" enter followers_count" name="followers_count" class="rounded text-black" > <br> <br>
+            
+            <label for="following_count">Enter your Following count : </label>
+            <input type="text"  placeholder=" enter following_count" name="following_count" class="rounded text-black" > <br> <br>
+            
+            <div class="Container">
+                <label for="content" >Write about yourself : </label>
+                <textarea name="content" placeholder=" write your info" id="" rows="8" cols="50" class="rounded text-black" ></textarea> <br>
+            </div>
+            
+            <br>
+            <input type="file" name="profile_pic" id="">
+            <br> <br>
+            <button class="btn btn-light">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

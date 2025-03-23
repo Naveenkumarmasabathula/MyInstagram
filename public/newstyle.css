@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.952);
+}
+.Container {
+    display: flex;
+    align-items: start;
+    justify-content:flex-start ;
+    gap: 10px;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+input{
+    border: none;
+}
+
+.Container textarea{
+   border: none;
+}

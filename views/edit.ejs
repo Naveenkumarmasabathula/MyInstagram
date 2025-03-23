@@ -1,0 +1,21 @@
+<%- include("includes/newi.ejs") %>
+
+<body class="bg-dark" >
+
+    <h2 class="text-white">Edit Account</h2>
+    <p>Account id: <%= account.id  %></p>
+    <p>Post username: @<%= account.username %> </p>
+    <form method="POST" action="/accounts/<%= account.id %>?_method=PATCH" >
+        
+        <div class="Container">
+            <label for="content">Edit Content:</label>
+            <textarea name="content" id="" rows="10" cols="35" placeholder=" Write your new content here" class="text-black">
+                <%= account.content %>
+            </textarea>
+        </div>
+
+        <br>
+        <button class="btn btn-light fw-semibold" >Submit</button>
+    </form>
+</body>
+</html>
