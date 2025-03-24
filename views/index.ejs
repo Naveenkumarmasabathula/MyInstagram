@@ -40,10 +40,10 @@
                         
                     </div>
                 </div>
-                <a href="http://localhost:3000/accounts/<%= account.id %>"><i class="fa-solid fa-circle-user m-3"></i></a>
+                <a href="/accounts/<%= account.id %>"><i class="fa-solid fa-circle-user m-3"></i></a>
                 
-                <a href="http://localhost:3000/accounts/<%= account.id %>/edit"><i class="fa-solid fa-pen-to-square"></i></a>
-                <form method="post" action="http://localhost:3000/accounts/<%= account.id %>?_method=delete" style="display: inline;">
+                <a href="accounts/<%= account.id %>/edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                <form method="post" action="/accounts/<%= account.id %>?_method=delete" style="display: inline;">
                     <i class="fa-solid ">
                         <button  class="btn btn-dark">Del</button>
                     </i>
